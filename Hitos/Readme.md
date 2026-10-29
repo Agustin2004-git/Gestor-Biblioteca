@@ -24,20 +24,20 @@ Explícalo en 2 o 3 líneas, con tus palabras (Hito 3).
 
 Una entrada al final de cada sesión: fecha, qué has hecho y qué te ha costado o qué has preguntado.
 
-- 27/10/2026 · Hecho: ...
-  Me ha costado: ...
+- 29/10/2026 · Hecho: He creado tres arrays relacionados con un id que son libros, prestamos y socios. También me he creado un repositorio en github para subir los archivos
+  Me ha costado: Crearme el repositorio en git y subir los archivos 
   He preguntado: ...
 
 ## Uso de IA
 
 Si no la has usado, escribe «No he usado IA».
 
-- Herramienta:
-- Para qué la usé (explicar, depurar, generar código):
-- Qué le pedí (resumen):
-- Qué cambié yo y por qué:
-- Qué he aprendido:
+- Herramienta:Claude
+- Para qué la usé (explicar, depurar, generar código):La he utilizado para que me ayudara a crearme el repositorio en Git y que me enseñara a cómo subir el código y las modificaciones a mi repositorio desde la terminal y también que me diera ejemplos de libro del nombre y los autores de esos libros
+- Qué le pedí (resumen):crear un repositorio en Git y subir el código desde la terminal y que me diera ejemplos de libros y sus autores
+- Qué cambié yo y por qué:He cambiado algunos comandos a la hora de crearme un repositorio ya que al crearlo la primera vez lo he creado con un nombre diferente así que lo he tenido que modificar y comprobar que estaba correcto
+- Qué he aprendido:He aprendido a trabajar con un repositorio en Git para hacer subir código y también he aprendido que si dejas una constante en blanco aparece empty y que si en una constante introduces valores de distinto tipo se mezcla igua
 
 ## Git (opcional)
 
-Si llevas el proyecto en Git, pon aquí el enlace al repositorio:
+https://github.com/Agustin2004-git/Gestor-Biblioteca/tree/main/Hitos
