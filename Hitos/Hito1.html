@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
     <title>Document</title>
 </head>
 
@@ -25,14 +26,14 @@
             [5, "La Regenta", , "novela", 1885, "3,50"],
             [6, "Marianela", "Benito Pérez Galdós", "novela", 1878, 2.5],
             [7, "Don Quijote de la Mancha", "Miguel de Cervantes", "novela", 1605, 4],
-            [8, "Campos de Castilla", "Antonio Machado", "poesía", 1912, 2],
-            [9, "Bodas de sangre", , "teatro", 1933, 2.5],
+            [8, "Campos de Castilla", "", "poesía", 1912, 2],
+            [9, "Bodas de sangre", "", "teatro", 1933, 2.5],
             [10, "La casa de Bernarda Alba", "Federico García Lorca", "teatro", 1945, 2.5],
             [11, "El árbol de la ciencia", "Pío Baroja", "novela", 1911, 3],
             [12, "Luces de bohemia", "Ramón María del Valle-Inclán", "teatro", 1920, "3"],
             [13, "Fortunata y Jacinta", "Benito Pérez Galdós", "novela", 1887, "4,50"],
             [14, "Romancero gitano", "Federico García Lorca", "poesía", 1928, 2],
-            [15, "El Lazarillo de Tormes", , "novela", 1554, 1.5],
+            [15, "El Lazarillo de Tormes", "", "novela", 1554, 1.5],
             [16, "Nada", "Carmen Laforet", "novela", 1945, 3]
         ]
 
@@ -44,7 +45,7 @@
 
         const socios = [
             [1, "Íñigo Núñez Peña", 19, true],
-            [2, "Begoña Álvarez Ortiz", 21, true],
+            [2, "", 21, true],
             [3, "Lucía Fernández Gil", , true],
             [4, "", 22, false],
             [5, "Núria Ibáñez Roca", , true],
@@ -54,20 +55,25 @@
 
         //El valor que tiene cada posicion de prestamos
         const Prestamo_id = 0;
-        const Prestamo_libro_id = 1;
-        const Prestamo_socio_id = 2;
+        const Prestamo_socio_id = 1;
+        const Prestamo_libro_id = 2;
         const Prestamo_dia = 3;
         const Prestamo_devuelto = 4;
 
         const prestamos = [
             [1, 2, 1, 3, false],
-            [2, 1, 2, 3, true],
-            [3, 7, , 5, false],
-            [4, 9, 1, 6,],
-            [5, 3, 5, 8, false],
-            [6, 13, 2, , false],
-            [7, 5, 6, 10, true],
-            [8, 14, 4, 11, true]
+            [2, 1, 2, , true],
+            [3, 3, , 5,],
+            [4, 4, 8, 6,],
+            [5, 1, 5, 8, false],
+            [6, 2, 9, , false],
+            [7, 6, 13, 10,],
+            [8, 5, 4, 11, true],
+            [9, 2, 15, 30, false],
+            [10, 5, 8, 13, true],
+            [11, 4, 16, 3, true],
+            [12, 3, 8, 20, false],
+            [13, 6, 7, 5, false]
 
         ];
 
