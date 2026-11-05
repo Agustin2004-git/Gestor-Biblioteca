@@ -24,7 +24,6 @@ Válido si: Funciona dentro de tu proyecto, en js/regla.js, y tiene al menos 2 p
 > ...
 
 ## Por qué uso Map y Set
-## Por qué uso Map y Set
 
 Uso Map para busccar la id de libros y socios porque con get se encuentra mucho mas rapido la clave que busco porque voy directo a la clave, pero en un array con find tienes que recorrer todas las filas una por una hasta encontrar la clave que buscas entonces no seria eficiente ya que si tu clave esta al final se tiene que recorrer todo el array. También uso map en titulosPorGenero porque con set en generos no permite que haya generos repetidos, así no tengo que comprobar si se repite alguno.
 
@@ -43,6 +42,11 @@ Hecho: He creado otras 6 consultas, dos de ellas con map que son indiceLibros e 
 Me ha costado:He tenido problemas con la pagina de pruebas que me salia en blanco, he confundido el set  con el set de map ya que pensaba que descartaba repetidos cuando los agrupaba, entender como el ultimo closure recuerda el ultimo id.
 He preguntado: Como se creaba el map id y como podia comprobarlo, como podia cambiar el buscarLibroPorId de find a get.
 
+- 5/11/2026
+Hecho: He creado las funciones prestar y la de borrar prestamo y si algo fallta lanzo una excepcion con throw, devuelve los cambios en otralista para no cambiar la original. He creado mi regla personal, calcularMulta y el menu con un prompt para pedir numeros, muestra los mensajes con alert y antes de borrar nada con confirm pregunta si esta seguro antes de borrar los cambios. He cambiado la funcion de buscarPorId para que use get en vez de find y he creado las pruebas para comprobar que las nuevas funciones no daban error tambien he hecho control de errores en el menu poniendo datos vacios con letras y dandole a cancelar 
+Me ha costado:Entender por qué prestar y borrarPrestamo devuelven una lista nueva en vez de cambiar la original, y que el menú guarde la lista actual en una variable.
+He preguntado: Si el día del préstamo son los días para devolver o el día en que se presta el libro, cómo revisar que todas las funciones tienen JSDoc y como podia programar la regla personal
+
 
 ## Uso de IA
 - 3/11/2026 
@@ -59,6 +63,12 @@ He preguntado: Como se creaba el map id y como podia comprobarlo, como podia cam
 - Qué cambié yo y por qué: Cambiar la constante de librosDeGenero para que use filtrarPor para no tener dos funciones que hagan lo mismo, he cambiado algunos valores que estaban en las pruebas que me ha generado para forzar el fallo
 - Qué he aprendido: He aprendido a crear un índice con Map para buscar por id con get, a quitar repetidos con Set, y qué es un closure. También que hay diferencia entre un set de un Map y un Set.
 
+- 5/11/2026 
+- Herramienta:Claude
+- Para qué la usé (explicar, depurar, generar código):Para explicar funciones de orden superior, para generar código, pruebas para las nuevas consultas y para depurar errores que me salían.
+- Qué le pedí (resumen):Que me guiara por cada paso del enunciado del hito4 y me xplicara lo que me estaban pidiendo, que me ayudara a hacer la funcion de prestar que es la de la regla personal, que me ayudara con el main para ver que casos podia poner en el menu y me ayudara con el codigo de los casos Total de fianzas prestadas y  Calcular multa y por ultimo me pusiera ejemplos de las pruebas de borrar prestamo y algunas de alta 
+- Qué cambié yo y por qué: Cambie pruebas que me dio claude ya que me parecian muy complicadas y no era capaz de comprenderlas igual que las funcion de la prueba personal, cambie el maximo dia de prestamo porque veia mejor que fueran 31 dias en vez de 60. 
+- Qué he aprendido: A escribir una altas y bajas que no modifican la lista original, a controlar errores con throw y trycatch, y a hacer un menú que no se rompe con prompt, confirm y alert.
 ## Git (opcional)
 https://github.com/Agustin2004-git/Gestor-Biblioteca2/tree/main/js
 

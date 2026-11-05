@@ -94,10 +94,11 @@ function LibroAnterior(anio) {
 //6.Totalizar con reduce esta funcion me va asumar las fianzas de los libros prestados
 /**
  * Suma las fianzas de los libros prestados (préstamos sin devolver).
+ * @param {Array[]} [lista=prestamos]  Lista de préstamos
  * @returns {number} Total de fianzas, redondeado a 2 decimales
  */
-function totalFianzasPrestados() {
-    const total = prestamos.reduce((suma, prestamo) => {
+function totalFianzasPrestados(lista = prestamos) {
+    const total = lista.reduce((suma, prestamo) => {
         if (prestamo[Prestamo_devuelto] === false) {
             const libro = buscarPorId(prestamo[Prestamo_libro_id]);
             if (libro !== undefined) {

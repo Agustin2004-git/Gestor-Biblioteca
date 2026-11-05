@@ -123,3 +123,57 @@ prueba("dos generadores de ids son diferentes e independientes", () => {
 prueba("Devuelve solo las filas que cumplen la condición", () => {
     igual(filtrarPor([[1], [2], [3]], (fila) => fila[0] > 1), [[2], [3]]);
 });
+
+
+/*----Pruebas del Hito 4----*/
+//Regla personal: multa por retraso
+prueba("Regla Personal: 4 días de retraso son 0,80 €", () => {
+    igual(calcularMulta(4), 0.8);
+});
+
+prueba("Regla Personal: 10 días de retraso son 2,00 € (límite del primer tramo)", () => {
+    igual(calcularMulta(10), 2);
+});
+
+prueba("Regla Personal: 12 días de retraso son 3,00 € (cambia de tramo)", () => {
+    igual(calcularMulta(12), 3);
+});
+
+prueba("Regla Personal: 0 días de retraso son 0 €", () => {
+    igual(calcularMulta(0), 0);
+});
+
+prueba("Regla Personal: unos días negativos lanzan error", () => {
+    lanzaError(() => calcularMulta(-1), "Días de retraso no válidos");
+});
+
+//Alta: prestar
+prueba("prestar añade un préstamo a la lista nueva", () => {
+    const nueva = prestar(prestamos, 1, 3, 5, () => 14);
+    igual(nueva.length, 14);
+    igual(nueva[13], [14, 1, 3, 5, false]);
+});
+
+prueba("prestar no modifica la lista original", () => {
+    prestar(prestamos, 1, 3, 5, () => 14);
+    igual(prestamos.length, 13);
+});
+
+prueba("prestar falla si el socio no existe", () => {
+    lanzaError(() => prestar(prestamos, 99, 3, 5, () => 14), "Socio no encontrado");
+});
+
+prueba("prestar falla si el libro ya está prestado", () => {
+    lanzaError(() => prestar(prestamos, 1, 1, 5, () => 14), "Libro ya prestado");
+});
+
+//Baja: borrarPrestamo
+prueba("borrarPrestamo quita el préstamo sin tocar la lista original", () => {
+    const nueva = borrarPrestamo(prestamos, 2);
+    igual(nueva.length, 12);
+    igual(prestamos.length, 13);
+});
+
+prueba("borrarPrestamo falla si el id no existe", () => {
+    lanzaError(() => borrarPrestamo(prestamos, 99), "Préstamo no encontrado");
+});
